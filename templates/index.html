@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="{{url_for('static', filename='faviconCapstone.ico')}}">
+    <meta charset="UTF-8">
+    <title>Coding Capstone</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"
+  </head>
+  <body>
+    <img src="https://raw.githubusercontent.com/michaelkosiorek/capstone/main/logoClear.ico">
+    <br>
+    <form action="calculate" method="post">
+      {% for message in get_flashed_messages()%}
+        <p> {{message}} </p>
+      {% endfor %}
+      <br>
+      <input type="text" name="number_input">
+      <br>
+      <input type="submit" value="Calculate" id="calculate">
+    </form>
+  </body>
+</html>
